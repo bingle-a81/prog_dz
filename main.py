@@ -31,6 +31,16 @@ def get_first_level_directories(root_dir):
     return directories
 
 # Пример использования функции
-root_directory ='..\\mk\\'
+root_directory ='mk\\'
 first_level_dirs = get_first_level_directories(root_directory)
-print(first_level_dirs)
+# print(first_level_dirs)
+
+for i in ls1:
+    if i in first_level_dirs:
+        print(i)
+    else:
+        print('нет')
+        
+
+if __name__ == '__main__':
+    pass

@@ -12,3 +12,4 @@ def get_first_level_directories(root_dir):
             directories.append(item)
             
     return directories  
+

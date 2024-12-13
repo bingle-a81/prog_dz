@@ -59,10 +59,12 @@ if __name__ == '__main__':
                 for k in therd_level_dirs:
                     if k in df1['Станок'].values: 
                         for x in file_search(root_directory+i+'\\'+j+'\\'+k+'\\'):    
-                            # print(bdup_directory+find_name_prog(x))                
-                            naz_level_dirs=func_folder.get_first_level_directories(bdup_directory+find_name_prog(x))
-                            print(naz_level_dirs)
-                            # copy_file(root_directory1+i+'\\'+j+'\\'+k+'\\',naz_level_dirs[0])
+                            # print(bdup_directory+find_name_prog(x)) 
+                            nazv=find_name_prog(x)               
+                            naz_level_dirs=func_folder.get_first_level_directories(bdup_directory+find_name_prog(x)+'\\'+k+'\\')
+                            for _ in file_search(os.path.join(bdup_directory,find_name_prog(x),k)):
+                                copy_file(root_directory1+i+'\\'+j+'\\'+k+'\\',_)
+                            # copy_file(root_directory1+i+'\\'+j+'\\'+k+'\\',os.path.join(bdup_directory,find_name_prog(x),k,x))
 
 
                         # shutil.copytree(root_directory+i+'\\'+j+'\\'+k+'\\', root_directory1+i+'\\'+j+'\\'+k+'\\')

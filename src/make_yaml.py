@@ -1,23 +1,18 @@
-from encodings.utf_8 import decode
-import os, yaml
-import time
-import codecs
+import yaml
 
 def open_yaml_file(path):
     with open(path, "r", encoding="utf-8") as f:
         return yaml.load(f, Loader=yaml.FullLoader)
     
-def write_to_yaml_file(name_prog):
+def write_to_yaml_file(name_prog,addres):
     path = "dict_yaml.yaml"
     dict_programms = {}
     dict_programms.setdefault(name_prog, {})
     dict_programms[name_prog] = {
-        "adress": name_prog,
-        "prog": dict_programms[name_prog].get("prog", []) ,
+        "adress": addres,
+        # "prog": dict_programms[addres].get("prog", []) ,
     }
-
-
-    with open(path, "a") as f:
-        yaml.dump(dict_programms, f)
+    with open(path, "a",encoding="utf-8") as f:
+        yaml.dump(dict_programms, f,allow_unicode=True)
         
 

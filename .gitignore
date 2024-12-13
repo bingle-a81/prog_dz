@@ -7,6 +7,9 @@ set.ini
 # C extensions
 *.so
 mk/
+UP/
+УП/
+dict_yaml.yaml
 # Distribution / packaging
 .Python
 build/

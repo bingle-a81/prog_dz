@@ -7,7 +7,7 @@ def zamena(x):
                        'Nomura NN-20J3(4,5)': ['Nomura NN-20J3 (4)', 'Nomura NN-20J3 (5)'],
                          'Nomura NN-20J3XB80(6)': ['Nomura NN-20J3 (6)'], 
                          'Tsugami BO126 TF-III': ['Tsugami BO126TF-III'],
-                           'Tsugami BO126TF-V': ['Tsugami BO126TF-5'], 
+                           'Tsugami BO126 TF-V': ['Tsugami BO126TF-5'], 
                            'Tsugami SS267-III': ['Tsugami SS267-III'],
                              'Tsugami M08SY-II': ['Tsugami M08SY-II'], 
                              'Hanhwa XD20H': ['Hanwha XD20H'],

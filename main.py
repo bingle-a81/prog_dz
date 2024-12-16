@@ -20,12 +20,15 @@ def new_func(df1,  root_directory, root_directory1, bdup_directory):
                 stanok=df1.loc[df1['Деталь']==j]['Станок']                
                 # print(stanok.values[0])
                 for k in therd_level_dirs:
+                    print(k,stanok.values[0])
                     if k == stanok.values[0]: 
+                        
                         for x in func_folder.file_search(root_directory+i+'\\'+j+'\\'+k+'\\'):    
                             # nazv=func_folder.find_name_prog(x)               
                             # naz_level_dirs=func_folder.get_first_level_directories(bdup_directory+func_folder.find_name_prog(x)+'\\'+k+'\\')
                             for _ in func_folder.file_search(os.path.join(bdup_directory,func_folder.find_name_prog(x),k)):
                                 func_folder.copy_file(root_directory1+i+'\\'+j+'\\'+k+'\\',_)
+                        
                         make_yaml.write_to_yaml_file(j,root_directory1+i+'\\'+j+'\\'+k+'\\')
 
 if __name__ == '__main__':
